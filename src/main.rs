@@ -3,7 +3,6 @@ use url::Url;
 use prio::vdaf::prio3::Prio3Histogram;
 use janus_messages::{Duration, TaskId};
 use std::str::FromStr;
-use tokio::time::Instant;
 
 #[tokio::main]
 async fn main() {
@@ -11,7 +10,7 @@ async fn main() {
     let helper_url = Url::parse("https://staging-dap-09-1.api.divviup.org/").unwrap();
     let vdaf = Prio3Histogram::new_histogram(
         2,
-        11,
+        12,
         4
     ).unwrap();
     let taskid = "rc0jgm1MHH6Q7fcI4ZdNUxas9DAYLcJFK5CL7xUl-gU";
