@@ -21,7 +21,7 @@ async fn main() {
         task,
         leader_url,
         helper_url,
-        Duration::from_seconds(60),
+        Duration::from_seconds(300),
         vdaf
     )
     .await
